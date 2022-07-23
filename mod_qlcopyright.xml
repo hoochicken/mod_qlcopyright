@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="4.0"
+        client="site"
+        method="upgrade">
+    <name>qlcopyright</name>
+    <author>Mareike Riegel</author>
+    <creationDate>20220723</creationDate>
+    <copyright>ql.de</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>mareike.riegel@ql.de</authorEmail>
+    <authorUrl>ql.de</authorUrl>
+    <version>2.0.0</version>
+    <description>MOD_QLCOPYRIGHT_XML_DESCRIPTION</description>
+    <!--updateservers>
+        <server type="extension" priority="1" name="qlcopyright - Updates"><![CDATA[https://www.blackforest-software.com/_scripts/updates/mod_qlcopyright.xml]]></server>
+    </updateservers-->
+    <files>
+        <filename module="mod_qlcopyright">mod_qlcopyright.php</filename>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>mod_qlcopyright.php</filename>
+        <filename>mod_qlcopyright.xml</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qlcopyright.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qlcopyright.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qlcopyright.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qlcopyright.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params"
+                addfieldpath="/modules/mod_qlcopyright/php/fields"
+                addrulepath="/modules/mod_qlcopyright/php/rules">
+            <fieldset
+                    name="basic">
+                <field type="text" name="company" label="MOD_QLCOPYRIGHT_COMPANY_LABEL"
+                       description="MOD_QLCOPYRIGHT_COMPANY_DESC"/>
+                <field type="list" name="year" label="MOD_QLCOPYRIGHT_YEAR_LABEL"
+                       description="MOD_QLCOPYRIGHT_YEAR_DESC">
+                    <option value="year0000">MOD_QLCOPYRIGHT_YEARCURRENT0000</option>
+                    <option value="year00">MOD_QLCOPYRIGHT_YEARCURRENT00</option>
+                </field>
+                <field type="spacer" name="spacer" label="MOD_QLCOPYRIGHT_ORDERING"/>
+                <field type="radio" name="position1" label="J1" class="btn-group">
+                    <option value="">JNONE</option>
+                    <option value="company">MOD_QLCOPYRIGHT_COMPANY_LABEL</option>
+                    <option value="copy">MOD_QLCOPYRIGHT_COPY</option>
+                    <option value="year">MOD_QLCOPYRIGHT_YEAR_LABEL</option>
+                </field>
+                <field type="radio" name="position2" label="J2" class="btn-group">
+                    <option value="">JNONE</option>
+                    <option value="company">MOD_QLCOPYRIGHT_COMPANY_LABEL</option>
+                    <option value="copy">MOD_QLCOPYRIGHT_COPY</option>
+                    <option value="year">MOD_QLCOPYRIGHT_YEAR_LABEL</option>
+                </field>
+                <field type="radio" name="position3" label="J3" class="btn-group">
+                    <option value="">JNONE</option>
+                    <option value="company">MOD_QLCOPYRIGHT_COMPANY_LABEL</option>
+                    <option value="copy">MOD_QLCOPYRIGHT_COPY</option>
+                    <option value="year">MOD_QLCOPYRIGHT_YEAR_LABEL</option>
+                </field>
+            </fieldset>
+            <fieldset
+                    name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="1"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="1">JGLOBAL_USE_GLOBAL
+                    </option>
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static">
+                    <option
+                            value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
