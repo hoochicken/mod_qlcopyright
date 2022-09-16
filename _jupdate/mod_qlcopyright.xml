@@ -1,15 +1,15 @@
  <updates>
 	 <update>
-		<name>qllogo</name>
+		<name>qlcopyright</name>
 		<client>site</client>
 		<type>module</type>
-		<folder>mod_qllogo</folder>
-		<element>qllogo</element>
-		<version>2.0.8</version>
-		<description>qlaudio displays a form</description>
+		<folder>mod_qlcopyright</folder>
+		<element>qlcopyright</element>
+		<version>2.0.9</version>
+		<description>qlcopyright displays a copyright and company along with the current year information</description>
 		<infourl title="ql.de - Blackforest Software">https://ql.de</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/hoochicken/mod_qlcopyright/archive/refs/tags/v2.0.8.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/hoochicken/mod_qlcopyright/archive/refs/tags/v2.0.9.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
