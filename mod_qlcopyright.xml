@@ -31,9 +31,7 @@
         <language tag="de-DE">language/de-DE/de-DE.mod_qlcopyright.sys.ini</language>
     </languages>
     <config>
-        <fields name="params"
-                addfieldpath="/modules/mod_qlcopyright/php/fields"
-                addrulepath="/modules/mod_qlcopyright/php/rules">
+        <fields name="params">
             <fieldset
                     name="basic">
                 <field type="text" name="company" label="MOD_QLCOPYRIGHT_COMPANY_LABEL"
