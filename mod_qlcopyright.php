@@ -1,14 +1,18 @@
 <?php
 /**
  * @package        mod_qlcopyright
- * @copyright    Copyright (C) 2022 ql.de All rights reserved.
+ * @copyright    Copyright (C) 2026 ql.de All rights reserved.
  * @author        Mareike Riegel mareike.riegel@ql.de
  * @license        GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+use Joomla\CMS\Helper\ModuleHelper;
+use Joomla\Registry\Registry;
+
 // no direct access
 defined('_JEXEC') or die;
 
+/** @var Registry $params  */
 if ('year0000' == $params->get('year', '')) $yearFormula = 'Y';
 elseif ('year00' == $params->get('year', '')) $yearFormula = 'y';
 else $yearFormula = false;
@@ -31,4 +35,4 @@ for ($i = 1; $i <= 3; $i++) {
     ${'position' . $i} = $value;
 }
 
-require JModuleHelper::getLayoutPath('mod_qlcopyright', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_qlcopyright', $params->get('layout', 'default'));
